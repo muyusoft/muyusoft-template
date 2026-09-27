@@ -1,3 +1,5 @@
+. "$(dirname "$0")/branch-name.sh"
+
 branch=$(git branch --show-current)
 
 # En detached HEAD (rebase, bisect) no hay rama que validar.
@@ -12,20 +14,11 @@ if [ -n "$branch" ]; then
     exit 1
   fi
 
-  if ! echo "$branch" | grep -qE '^(feat|fix|refactor|chore|docs|test|perf|ci)/([A-Z]+-[0-9]+-)?[a-z0-9]+(-[a-z0-9]+)*$'; then
+  if ! msg=$(validate_branch_name "$branch"); then
     echo ""
-    echo "  ERROR: nombre de rama invalido -> $branch"
+    echo "  ERROR: no se commitea en una rama que no cumple el estandar."
     echo ""
-    echo "    Formato: <type>/<descripcion-en-kebab-case>"
-    echo "    Types:   feat fix refactor chore docs test perf ci"
-    echo "    Ejemplo: feat/user-profile-screen"
-    echo ""
-    exit 1
-  fi
-
-  if [ "${#branch}" -gt 50 ]; then
-    echo ""
-    echo "  ERROR: rama demasiado larga -> ${#branch} caracteres (maximo 50)"
+    echo "$msg"
     echo ""
     exit 1
   fi
