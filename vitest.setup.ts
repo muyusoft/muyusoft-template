@@ -1,10 +1,5 @@
-/**
- * Vitest setup file
- * Mocks for React Native and Expo modules
- */
 import { vi } from "vitest";
 
-// Mock AsyncStorage
 vi.mock("@react-native-async-storage/async-storage", () => ({
   default: {
     getItem: vi.fn(() => Promise.resolve(null)),
@@ -14,14 +9,12 @@ vi.mock("@react-native-async-storage/async-storage", () => ({
   },
 }));
 
-// Mock expo-secure-store
 vi.mock("expo-secure-store", () => ({
   getItemAsync: vi.fn(() => Promise.resolve(null)),
   setItemAsync: vi.fn(() => Promise.resolve()),
   deleteItemAsync: vi.fn(() => Promise.resolve()),
 }));
 
-// Mock i18next
 vi.mock("@/config/i18n", () => ({
   default: {
     t: (key: string) => key,
@@ -30,7 +23,6 @@ vi.mock("@/config/i18n", () => ({
   },
 }));
 
-// Mock logger
 vi.mock("@/config/logger", () => ({
   logger: {
     debug: vi.fn(),
@@ -43,6 +35,5 @@ vi.mock("@/config/logger", () => ({
   },
 }));
 
-// Suppress console in tests
 global.console.error = vi.fn();
 global.console.warn = vi.fn();

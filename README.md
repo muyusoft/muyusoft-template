@@ -2,13 +2,6 @@
 
 <div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue)](https://www.typescriptlang.org/)
-[![Expo SDK](https://img.shields.io/badge/Expo-SDK%2057-black)](https://docs.expo.dev/versions/v57.0.0/)
-[![React Native](https://img.shields.io/badge/React%20Native-0.86.3-61dafb)](https://reactnative.dev/)
-[![Test Coverage](https://img.shields.io/badge/Coverage-81.3%25-brightgreen)](https://vitest.dev/)
-[![Tested with Vitest](https://img.shields.io/badge/Tested%20with-Vitest-6e9f18)](https://vitest.dev/)
-
 A production-ready React Native + Expo SDK 57 template with strict TypeScript, comprehensive testing, state management, internationalization, and professional infrastructure.
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [Testing](#-testing)
@@ -504,17 +497,6 @@ describe("MyStore", () => {
 
 ---
 
-## 📚 Resources
-
-- [Expo Docs](https://docs.expo.dev/versions/v57.0.0/) - Official documentation
-- [React Native Docs](https://reactnative.dev/) - Core framework
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/) - Type safety
-- [Zustand GitHub](https://github.com/pmndrs/zustand) - State management
-- [i18next Guide](https://www.i18next.com/) - Internationalization
-- [Vitest Docs](https://vitest.dev/) - Testing framework
-
----
-
 ## 📈 Project Statistics
 
 | Metric              | Value     |
@@ -534,18 +516,6 @@ describe("MyStore", () => {
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** with clear messages (`git commit -m 'feat: add amazing feature'`)
-4. **Add tests** - maintain 80%+ coverage
-5. **Run checks** - `npm run lint && npm test`
-6. **Push** to branch (`git push origin feature/amazing-feature`)
-7. **Create** a Pull Request
-
 ### Code Standards
 
 - ✅ **TypeScript strict mode** - All code must be type-safe
@@ -553,30 +523,3 @@ Contributions are welcome! Please follow these guidelines:
 - ✅ **Test coverage** - New features require tests
 - ✅ **Clean code** - Follow SOLID principles
 - ✅ **Documentation** - Add comments for non-obvious logic
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📞 Support & Documentation
-
-- 📖 [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md) - Comprehensive project documentation
-- 🐛 [GitHub Issues](https://github.com/yourusername/rn-base-template/issues) - Report bugs
-- 💬 [GitHub Discussions](https://github.com/yourusername/rn-base-template/discussions) - Ask questions
-- 📧 Email - [your.email@example.com]
-
----
-
-<div align="center">
-
-**Made with ❤️ for the React Native community**
-
-Give a ⭐ if this template helped you!
-
-[⬆ Back to top](#react-native-base-template)
-
-</div>

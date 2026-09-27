@@ -1,23 +1,23 @@
-import { View, Image, StyleProp, ImageStyle } from "react-native";
+import type { SvgProps } from "react-native-svg";
 import { ICON_REGISTRY, type IconName } from "./index";
 
 interface IconRendererProps {
   name: IconName;
   size?: number;
   color?: string;
-  style?: StyleProp<ImageStyle>;
+  style?: SvgProps["style"];
 }
 
 /**
  * Renderiza un ícono SVG por nombre type-safe
  * - Busca en ICON_REGISTRY (centralizado en index.ts)
  * - TypeScript garantiza que el nombre es válido (IconName)
- * - Soporta size y color dinámicos
+ * - `color` alimenta el currentColor de los SVG, que son stroke-only
  */
 export function IconRenderer({
   name,
   size = 24,
-  color,
+  color = "currentColor",
   style,
 }: IconRendererProps) {
   const IconComponent = ICON_REGISTRY[name];
@@ -27,16 +27,7 @@ export function IconRenderer({
   }
 
   return (
-    <View style={[{ width: size, height: size }, style as any]}>
-      <Image
-        source={IconComponent}
-        style={{
-          width: size,
-          height: size,
-        }}
-        tintColor={color}
-      />
-    </View>
+    <IconComponent width={size} height={size} color={color} style={style} />
   );
 }
 

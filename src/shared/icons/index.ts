@@ -3,6 +3,9 @@
  * Los SVGs usan stroke="currentColor" para respetar colores dinámicos
  */
 
+import type { FC } from "react";
+import type { SvgProps } from "react-native-svg";
+
 import ActivityIcon from "./activity.svg";
 import ArrowLeftIcon from "./arrow-left.svg";
 import CameraIcon from "./camera.svg";
@@ -107,7 +110,7 @@ export {
   XIcon,
 };
 
-export const ICON_REGISTRY: Record<IconName, any> = {
+export const ICON_REGISTRY: Record<IconName, FC<SvgProps>> = {
   activity: ActivityIcon,
   "arrow-left": ArrowLeftIcon,
   camera: CameraIcon,
