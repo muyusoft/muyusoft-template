@@ -53,7 +53,7 @@ _Routes are thin._ src/app/** holds no markup beyond layout and no business logi
 
 ## 2. Non-negotiable code rules
 
-_Design tokens, always._ No literal hex color, pixel number, font size or radius anywhere. Product code takes its tokens from `@muyusoft/minga-ui` (`useMingaTheme()` → colors, spacing, radii, typography, dimensions), the Minga design system. `src/design/tokens.*` is the template's palette, used only by the playground; the examples below show the pattern, not the source.
+_Design tokens, always._ No literal hex color, pixel number, font size or radius anywhere.
 
 tsx
 // ❌
